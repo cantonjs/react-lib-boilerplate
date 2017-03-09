@@ -18,6 +18,7 @@
     "README.md",
     "LICENSE.md",
     "lib",
+    "es",
     "dist"
   ],
   "main": "lib/index.js",
