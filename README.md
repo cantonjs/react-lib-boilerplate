@@ -13,6 +13,10 @@
 3. Modify `package.json` name, description, etc.
 4. Happy hacking
 
+## Related Projects
+
+- [front-end-lib-boilerplate](https://github.com/cantonjs/front-end-lib-boilerplate)
+
 ## License
 
 MIT
