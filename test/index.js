@@ -20,6 +20,6 @@ describe('library', function () {
 		const text = 'hello world';
 		const App = () => (<div>{text}</div>);
 		const wrapper = mount(<App />);
-		assert(wrapper.find('div').text(), text);
+		assert.equal(wrapper.find('div').text(), text);
 	});
 });
