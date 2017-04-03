@@ -6,12 +6,13 @@
 - Auto testing (using `Mocha` and `enzyme`)
 - Output `cmd`, `umd`, and minified `umd` files.
 
-## Usages
+## Start a project
+
+Make sure you have installed [Node.js](https://nodejs.org/).
 
 1. `git clone` this repo
-2. `cd` to this repo dir, and run `rm -rf .git`
-3. Modify `package.json` name, description, etc.
-4. Happy hacking
+2. `cd` to this repo dir, and run `node setup`
+3. Happy hacking
 
 ## Related Projects
 
