@@ -41,8 +41,8 @@ ask('What is your project name?', 'name')
 		// console.log(`${rimrafCommand} ${gitDir}`);
 		childProcess.exec(`${rimrafCommand} ${gitDir}`);
 
-		console.log('Success.');
-		console.log('To install dependencies, please run `yarn` manually.');
+		console.log('Success.\n');
+		console.log('To install dependencies, please run `yarn` manually.\n');
 
 		fs.unlinkSync(__filename);
 	})
