@@ -51,9 +51,9 @@
     "mkdirp": "^0.5.1",
     "mocha": "^3.1.2",
     "prop-types": "^15.5.10",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
-    "react-test-renderer": "^15.5.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
     "rimraf": "^2.5.4",
     "webpack": "v2.2.1"
   }
