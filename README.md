@@ -3,7 +3,7 @@
 ## Supports
 
 - ES6 (using `webpack` and `babel`)
-- Auto testing (using `Mocha` and `enzyme`)
+- Auto testing (using `jest` and `enzyme`)
 - Output `cmd`, `umd`, and minified `umd` files.
 
 ## Start a project
