@@ -1,15 +1,8 @@
 import React from 'react';
-import jsdom from 'jsdom';
-import { mount } from 'enzyme';
-// import lib from '../src';
+import { configure, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-beforeEach(() => {
-	global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
-	if (typeof window === 'undefined') {
-		global.window = global.document.defaultView;
-		global.navigator = global.window.navigator;
-	}
-});
+configure({ adapter: new Adapter() });
 
 test('task', function () {
 	const text = 'hello world';
