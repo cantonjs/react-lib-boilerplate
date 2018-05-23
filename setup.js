@@ -1,4 +1,3 @@
-
 const fs = require('fs');
 const path = require('path');
 const childProcess = require('child_process');
@@ -13,17 +12,20 @@ const rl = readline.createInterface({
 
 const answers = {};
 
-const ask = (question, key) => new Promise((resolve) => {
-	const defaults = pkg[key];
-	rl.question(`${question} (default: ${defaults})\n`, (answer) => {
-		answers[key] = answer || defaults;
-		resolve();
+const ask = (question, key, defaultsAnswer) =>
+	new Promise((resolve) => {
+		const defaults = defaultsAnswer || pkg[key];
+		rl.question(`${question} (default: ${defaults})\n`, (answer) => {
+			answers[key] = answer || defaults;
+			resolve(answers);
+		});
 	});
-});
 
-ask('What is your project name?', 'name')
-	.then(() => ask('What is description?', 'description'))
-	.then(() => ask('What is repository?', 'repository'))
+ask('What is your project name?', 'name', path.basename(__dirname))
+	.then((answers) => ask('What is description?', 'description', answers.name))
+	.then((answers) =>
+		ask('What is repository?', 'repository', `cantonjs/${answers.name}`),
+	)
 	.then(() => ask('Who is the author?', 'author'))
 	.then(() => {
 		rl.close();
@@ -46,5 +48,6 @@ ask('What is your project name?', 'name')
 
 		fs.unlinkSync(__filename);
 	})
-	.catch((err) => { throw err; })
-;
+	.catch((err) => {
+		throw err;
+	});

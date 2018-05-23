@@ -23,7 +23,7 @@
 	"main": "lib/index.js",
 	"module": "es/index.js",
 	"jsnext:main": "es/index.js",
-	"author": "cap32",
+	"author": "Cap32",
 	"license": "MIT",
 	"dependencies": {
 		"prop-types": "^15.5.7",
