@@ -58,9 +58,9 @@
 		"mkdirp": "^0.5.1",
 		"npm-run-all": "^4.0.2",
 		"prettier-eslint-cli": "^4.7.0",
-		"react": "^16.3.2",
-		"react-dom": "^16.3.2",
-		"react-test-renderer": "^16.3.2",
+		"react": "^16.4.1",
+		"react-dom": "^16.4.1",
+		"react-test-renderer": "^16.4.1",
 		"rimraf": "^2.5.4",
 		"webpack": "^4.8.3",
 		"webpack-cli": "^2.0.10",
@@ -68,6 +68,11 @@
 		"yarn": "^1.6.0"
 	},
 	"jest": {
-		"modulePathIgnorePatterns": ["node_modules", "lib", "es", "dist"]
+		"modulePathIgnorePatterns": [
+			"node_modules",
+			"<rootDir>/lib/",
+			"<rootDir>/es/",
+			"<rootDir>/dist/"
+		]
 	}
 }
