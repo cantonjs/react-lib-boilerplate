@@ -25,11 +25,7 @@ module.exports = (webpackEnv = {}) => {
 					test: /\.js$/,
 					include: [srcDir, testDir, demoDir],
 					loader: 'babel-loader',
-					options: {
-						presets: [['es2015', { modules: false }], 'react', 'stage-0'],
-						cacheDirectory: true,
-						babelrc: false,
-					},
+					options: { cacheDirectory: true },
 				},
 			],
 		},
