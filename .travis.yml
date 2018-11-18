@@ -11,5 +11,8 @@ node_js:
 script:
   - yarn test --coverage
 
+# after_script:
+#   - yarn coveralls
+
 notifications:
   email: false
