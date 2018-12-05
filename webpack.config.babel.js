@@ -31,6 +31,11 @@ module.exports = (webpackEnv = {}) => {
 		resolve: {
 			modules: [srcDir, 'node_modules'],
 			extensions: ['.js'],
+			alias: {
+				// fix issues when using `npm link` or `yarn link`
+				'styled-components': resolve('./node_modules/styled-components'),
+				react: resolve('./node_modules/react'),
+			},
 		},
 		resolveLoader: {
 			moduleExtensions: ['-loader'],
